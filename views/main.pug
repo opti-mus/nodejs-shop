@@ -1,0 +1,23 @@
+include headers
+div(class='wrap')
+  div(class='site-header')
+      include site_header
+  div(class='container')
+    div(class='slide-nav foundation')
+      div(class='row mix-filter')
+        each val2,index2 in cat 
+          div(class='col col-lg-12 category-name')
+            h2
+              a(
+                href='/cat?id=' + val2['id']
+              ) #{val2['category']}
+          each val,index in goods
+            if val2['id'] == val['category']
+              include card
+    
+    include modal_cart
+    include nav
+  include footer
+  
+  
+  

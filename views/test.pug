@@ -1,0 +1,9 @@
+//- include headers
+button(type='button' data-filter='all') All
+button(type='button' data-filter='.category-a') Category a
+.container
+    div(class='mix category-a' data-order='1')
+    div(class='mix category-b' data-order='2')
+    div(class='mix category-b category-c' data-order='3')
+    div(class='mix category-a category-d' data-order='4')
+script(src="js/filter.js")

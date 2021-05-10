@@ -1,0 +1,24 @@
+div(class='col col-xlg-2 col-lg-3 col-md-4 col-sm-6 col-xsm-12 mix' data-filter=val['category'] data-price=val['cost'])
+  div(class='card')
+    a(href='/goods?id=' + val['id'])
+      h3(class='card-title text-center') #{val['name']}
+      img(
+        src='images/' + val['image']
+        class='card-images'
+      )
+    .user-options
+      div(class='all-card-rating' data-goods_id = val['id'])
+        include rating
+      .user-scale
+        i(class="fas fa-balance-scale" data-goods_id = val['id'])
+      .user-favorite
+        i(class="far fa-heart")
+    ul(class='card-actions')
+      li
+        p(class='text-center') #{val['cost']} грн
+      li
+        button(
+          data-goods_id = val['id']
+          class='button button-primary add-to-cart'
+        ) В корзину
+        

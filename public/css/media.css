@@ -1,0 +1,33 @@
+@media screen and (min-width: 1440px) {
+  .row .col-xlg-2 {
+    flex-basis: 20%;
+    max-width: 20%;
+  }
+}
+@media screen and (max-width: 1174px) {
+  .foundation.slide-nav {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .site-name {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .card .card-title {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .site-header .header-cabinet i:nth-child(2) {
+    display: none;
+  }
+
+  .card .card-title {
+    width: 200px;
+  }
+}

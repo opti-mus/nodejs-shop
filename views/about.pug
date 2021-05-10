@@ -1,0 +1,10 @@
+include headers
+
+div(class='wrap')
+  div(class='site-header')
+      include site_header
+    .container
+      h2 About
+      p.name Name: #{about[0]['name']}
+      p.surname Surname: #{about[0]['surname']}
+include footer

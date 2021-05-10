@@ -1,0 +1,26 @@
+include headers
+div(class='wrap')
+  div(class='content')
+    header(class='site-header')
+      include site_header_order.pug
+    form(class='reg-main')
+        input(
+            type='text',
+            name='username'
+            placeholder='Enter your name',
+            autocomplete = 'off'
+            )
+        input(
+            type='password',
+            name='password'
+            placeholder='Enter your password',
+            )
+        input(
+            type='email',
+            name='email'
+            placeholder='Enter your email',
+            )
+        button(class='button-primary', type='button' id = 'finish-reg') Принять
+script(src="//cdn.jsdelivr.net/npm/sweetalert2@10")
+script(src='js/reg.js')
+    

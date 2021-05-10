@@ -1,0 +1,28 @@
+include headers
+
+div(class='wrap')
+  div(class='site-header')
+    include site_header
+  div(class='container')
+    div(class='slide-nav foundation goods')
+      h2(class='category-name') #{goods[0]['name']}
+      .row
+        div(class='col col-md-4')
+          img(
+            src='images/' + goods[0]['image']
+            class='goods-image'
+            )
+        div(class='col col-md-8')
+          div #{goods[0]['description']}
+          p.price #{goods[0]['cost'].toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$& ')} грн.
+          div(class='all-card-rating' data-goods_id = goods[0]['id'])
+            include rating
+          ul(class='card-actions')
+            li
+              button(
+                data-goods_id = goods[0]['id']
+                class='button button-primary add-to-cart'
+              ) to cart
+    include nav
+    include modal_cart
+include footer

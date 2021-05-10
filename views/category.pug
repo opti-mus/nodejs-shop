@@ -1,0 +1,16 @@
+include headers
+
+div(class='wrap')
+  div(class='site-header')
+      include site_header
+  div(class='container')
+    div(class='slide-nav foundation')
+      div(class='row mix-filter')
+        div(class='col col-md-12 category-name')
+          h2 #{cat[0]['category']} 
+        each val,index in goods
+          include card
+        div(class='cat-desc') #{cat[0]['description']}
+    include nav
+    include modal_cart
+  include footer
